@@ -1,0 +1,15 @@
+#search_text = "self.insert_query(study, subject, payload)"
+#replace_text = "# self.insert_query(study, subject, payload)"
+with open(r'Hash_task.py', 'r') as file:
+    data = file.read()
+data_a=data.split('\n')
+final=[]
+for i in data_a:
+    if 'self.insert_query' in i and '#' not in i:
+        new='#'+i
+        final.append(new)
+    else:
+        final.append(i)
+        
+Last='\n'.join(final)
+print(Last)

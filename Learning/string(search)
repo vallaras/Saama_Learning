@@ -1,0 +1,8 @@
+with open(r'Hash_task.py','r') as fp:
+    lines = fp.readlines()
+    for row in lines:
+        #print(row)
+        word = 'print'
+        if row.find(word)==0:
+            print("Line{}: {}".format(row, lines.strip()))
+            print('line Number:', lines.index(line))
